@@ -1,0 +1,34 @@
+name: Task
+description: A unit of work to be done by a human or an agent.
+projects: ["chickware/1"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs to be done
+      description: Describe the outcome, not the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why this is needed. Link related issues, decisions (ADRs), or design docs.
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How a reviewer can tell this is done.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Constraints, open questions, out of scope.
+    validations:
+      required: false
